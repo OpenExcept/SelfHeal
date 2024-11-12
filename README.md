@@ -1,7 +1,7 @@
 # SelfHeal - Make all code self-healing
 ## Demo
 
-Demo shows how SelfHeal can help your code achieve self healing by:
+Demo shows:
 1. Slack alert with a link to the debug state
 2. Web viewer to browse and analyze debug states
 3. LLM analysis of the root cause and fix suggestions
