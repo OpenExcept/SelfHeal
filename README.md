@@ -8,6 +8,8 @@ Demo shows:
 
 ![Demo](https://raw.githubusercontent.com/OpenExcept/SelfHeal/main/assets/demo.gif)
 
+🔗 **Try the live demo at: [http://openexcept.com](http://openexcept.com)**
+
 ## Quick Start
 
 1. **Install**
@@ -44,4 +46,3 @@ class MyClass:
 ```bash
 streamlit run selfheal/debug_viewer.py
 ```
-Access example at http://openexcept.com
