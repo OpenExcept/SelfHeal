@@ -1,10 +1,7 @@
 # SelfHeal - Make all code self-healing
-
-SelfHeal helps your code achieve self healing, by automatically captures debug states when exceptions occur, sends Slack alerts, and provide LLM analysis of how to fix the root cause. See [examples](examples/README.md) for detailed usage scenarios.
-
 ## Demo
 
-The demo below demos 3 key features:
+Demo shows how SelfHeal can help your code achieve self healing by:
 1. Slack alert with a link to the debug state
 2. Web viewer to browse and analyze debug states
 3. LLM analysis of the root cause and fix suggestions
@@ -48,9 +45,3 @@ class MyClass:
 streamlit run selfheal/debug_viewer.py
 ```
 Access example at http://openexcept.com
-
-## How It Works
-
-When an exception occurs:
-1. Debug state is captured and saved
-2. Slack alert is sent with viewer link in the format of `http://openexcept.com?debug_path=/path/to/state.json`
