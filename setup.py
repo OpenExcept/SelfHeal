@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="selfheal",
-    version="1.0.0",
+    version="1.0.1",
     author="OpenExcept",
     author_email="ai.observability.eng@gmail.com",
     description="Make all code self-healing with automatic debug state capture and LLM analysis",

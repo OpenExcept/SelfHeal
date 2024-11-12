@@ -2,11 +2,11 @@
 ## Demo
 
 Demo shows:
-1. Slack alert with a link to the debug state
+1. Slack alert with a link to the debug state (including the full stack trace, variables, and source code)
 2. Web viewer to browse and analyze debug states
 3. LLM analysis of the root cause and fix suggestions
 
-![Demo](https://github.com/OpenExcept/SelfHeal/blob/main/assets/demo.gif)
+![Demo](https://raw.githubusercontent.com/OpenExcept/SelfHeal/main/assets/demo.gif)
 
 ## Quick Start
 
