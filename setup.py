@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="selfheal",
-    version="1.0.1",
+    version="1.0.2",
     author="OpenExcept",
     author_email="ai.observability.eng@gmail.com",
     description="Make all code self-healing with automatic debug state capture and LLM analysis",
@@ -14,9 +14,9 @@ setup(
     url="https://github.com/openexcept/selfheal",
     packages=find_packages(),
     classifiers=[
-        "Development Status :: 4 - Beta",
+        "Development Status :: 4 - Alpha",
         "Intended Audience :: Developers",
-        "License :: OSI Approved :: MIT License",
+        "License :: OSI Approved :: Apache Software License",
         "Operating System :: OS Independent",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.7",
