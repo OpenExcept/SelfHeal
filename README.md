@@ -4,17 +4,12 @@ SelfHeal helps your code achieve self healing, by automatically captures debug s
 
 ## Demo
 
-![Demo1](assets/demo1.gif)
+The demo below demos 3 key features:
+1. Slack alert with a link to the debug state
+2. Web viewer to browse and analyze debug states
+3. LLM analysis of the root cause and fix suggestions
 
-![Demo2](assets/demo2.gif)
-
-
-
-## Features
-
-- 🔍 **Debug State Capture**: Stack traces, variables, class state, source code
-- 📊 **Web Viewer**: Browse and analyze debug states
-- 🤖 **AI Analysis**: GPT-4 powered root cause analysis and fix suggestions
+![Demo](https://github.com/OpenExcept/SelfHeal/blob/main/assets/demo.gif)
 
 ## Quick Start
 
