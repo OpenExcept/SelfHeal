@@ -13,6 +13,30 @@ def load_debug_state(file_path: str) -> dict:
         st.error(f"Error loading debug state: {str(e)}")
         return {}
 
+def get_analysis_cache_path(debug_state_path: Path) -> Path:
+    """Get the path where the analysis cache should be stored."""
+    cache_dir = Path("/root/analysis_cache")
+    cache_dir.mkdir(exist_ok=True, parents=True)
+    return cache_dir / f"{debug_state_path.stem}_analysis.txt"
+
+def load_cached_analysis(debug_state_path: Path) -> str | None:
+    """Load cached analysis if it exists."""
+    cache_path = get_analysis_cache_path(debug_state_path)
+    if cache_path.exists():
+        try:
+            return cache_path.read_text()
+        except Exception as e:
+            st.warning(f"Failed to load cached analysis: {e}")
+    return None
+
+def save_analysis_cache(debug_state_path: Path, analysis: str):
+    """Save analysis result to cache."""
+    cache_path = get_analysis_cache_path(debug_state_path)
+    try:
+        cache_path.write_text(analysis)
+    except Exception as e:
+        st.warning(f"Failed to cache analysis: {e}")
+
 def main():
     st.set_page_config(page_title="Debug State Viewer", layout="wide")
     st.title("Debug State Viewer & Analyzer")
@@ -58,10 +82,23 @@ def main():
         
         with col2:
             st.header("Analysis")
-            if st.button("Analyze Debug State"):
-                with st.spinner("Analyzing debug state with LLM..."):
-                    analysis = debugger.analyze(str(selected_file))
-                    st.markdown(analysis)
+            
+            # Try to load cached analysis first
+            cached_analysis = load_cached_analysis(selected_file)
+            if cached_analysis:
+                st.markdown("### Cached Analysis")
+                st.markdown(cached_analysis)
+                if st.button("Reanalyze"):
+                    with st.spinner("Reanalyzing with LLM..."):
+                        analysis = debugger.analyze(str(selected_file))
+                        save_analysis_cache(selected_file, analysis)
+                        st.markdown(analysis)
+            else:
+                if st.button("Analyze Debug State"):
+                    with st.spinner("Analyzing debug state with LLM..."):
+                        analysis = debugger.analyze(str(selected_file))
+                        save_analysis_cache(selected_file, analysis)
+                        st.markdown(analysis)
 
 if __name__ == "__main__":
     main()
