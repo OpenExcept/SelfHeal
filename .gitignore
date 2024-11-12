@@ -1,7 +1,9 @@
-# Python build artifacts
-*.py[cod]
+# Python
 __pycache__/
+*.py[cod]
+*$py.class
 *.so
+.Python
 build/
 develop-eggs/
 dist/
@@ -18,46 +20,19 @@ wheels/
 .installed.cfg
 *.egg
 
-# Virtual environments
+# Virtual Environment
 venv/
-env/
 ENV/
-.env
-.venv
-env.bak/
-venv.bak/
 
-# IDE specific files
+# IDE
 .idea/
 .vscode/
 *.swp
 *.swo
-*~
 
-# Testing
-.tox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-.hypothesis/
-.pytest_cache/
+# Debug states
+/root/debug_states/
+/root/analysis_cache/
 
-# Distribution
-*.manifest
-*.spec
-
-# Logs and databases
-*.log
-*.sqlite
-
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db 
+# Environment variables
+.env

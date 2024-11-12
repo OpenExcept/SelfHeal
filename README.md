@@ -1,19 +1,26 @@
-# SelfHeal - Intelligent Debug State Capture & Analysis
+# SelfHeal - Make all code self-healing
 
-SelfHeal automatically captures debug states when exceptions occur, sends Slack alerts, and provides AI-powered analysis of failures. See [examples](examples/README.md) for detailed usage scenarios.
+SelfHeal helps your code achieve self healing, by automatically captures debug states when exceptions occur, sends Slack alerts, and provide LLM analysis of how to fix the root cause. See [examples](examples/README.md) for detailed usage scenarios.
+
+## Demo
+
+![Demo1](assets/demo1.gif)
+
+![Demo2](assets/demo2.gif)
+
+
 
 ## Features
 
 - 🔍 **Debug State Capture**: Stack traces, variables, class state, source code
 - 📊 **Web Viewer**: Browse and analyze debug states
 - 🤖 **AI Analysis**: GPT-4 powered root cause analysis and fix suggestions
-- 🔔 **Slack Integration**: Real-time alerts with direct links to debug states
 
 ## Quick Start
 
 1. **Install**
 ```bash
-pip install -r requirements.txt
+pip install selfheal
 ```
 
 2. **Configure**
@@ -45,7 +52,7 @@ class MyClass:
 ```bash
 streamlit run selfheal/debug_viewer.py
 ```
-Access at http://openexcept.com
+Access example at http://openexcept.com
 
 ## How It Works
 
