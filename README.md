@@ -8,7 +8,7 @@ Demo shows:
 
 ![Demo](https://raw.githubusercontent.com/OpenExcept/SelfHeal/main/assets/demo.gif)
 
-🔗 **Try the live demo at: [http://openexcept.com/demo](http://openexcept.com/demo)**
+🔗 **Try the live demo at: [https://selfheal.dev/demo](https://selfheal.dev/demo)**
 
 ## Quick Start
 
