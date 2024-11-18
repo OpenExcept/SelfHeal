@@ -14,7 +14,7 @@ setup(
     url="https://github.com/openexcept/selfheal",
     packages=find_packages(),
     classifiers=[
-        "Development Status :: 4 - Alpha",
+        "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: Apache Software License",
         "Operating System :: OS Independent",

@@ -265,7 +265,7 @@ Please provide in simple and actionable terms:
             thread_ts = response['ts']
             
             # Create clickable link to debug state viewer
-            viewer_url = f"http://openexcept.com?debug_path={debug_state_path}"
+            viewer_url = f"http://openexcept.com/demo?debug_path={debug_state_path}"
             self.slack_bot.reply_to_thread(
                 thread_ts=thread_ts,
                 message=f"View debug state: <{viewer_url}|Open in Viewer>",
